@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var tongtien = prompt("Nhập vào số tiền bạn có: ")
+        var dongia = prompt("Đơn giá: ")
+        var soluong = 0
+        var soLuong = 0
+        for(i=1;i<=tongtien;i++){
+            soluong=tongtien/dongia
+            soLuong=tongtien%dongia
+        }
+// console.log(soLuong)
+        
+        console.log(soluong)
+        alert("Số lượng hàng:"+ soluong.toFixed(0))
+        alert("Số tiền còn  để mua: "+ soLuong)
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var sinhVien = new Object();
+        sinhVien.hoTen = prompt('Họ tên sinh viên: ');
+        sinhVien.diem = prompt('Điểm: ');
+        sinhVien.hienThi = function(){
+            sinhVien.hocLuc;
+            if(this.diem>=5) this.hocLuc = "Qua môn";
+            else this.hocLuc = "Học lại";
+            document.write('Họ và tên: '+this.hoTen+'<br>');
+            document.write('Điểm: '+this.diem+'<br>');
+            document.write('Học Lực: '+this.hocLuc);
+        }    
+    </script>
+    <button onclick="sinhVien.hienThi();">Hiển thị thông tin sv</button>
+</body>
+</html>

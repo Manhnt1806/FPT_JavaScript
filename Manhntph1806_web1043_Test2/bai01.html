@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;   
+        }
+        img{height: 300px;
+            width: 900px;
+        }
+        button{
+            background-color: rgba(0, 153, 248, 0.885);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+   <img src="C:\Users\PC\Desktop\Manhntph1806_web1043_Test2\img\0.jpg" id="anh">
+      <script onload="start">
+        var img = [];
+       
+        for(var i=0; i<3; i++){
+            img[i] = new Image();
+            img[i].src = "C:/Users/PC/Desktop/Manhntph1806_web1043_Test2/img/" + i + ".JPG";
+        }
+        var index = 0;
+        function start(){
+            index ++;
+            if(index==img.length) index = 0;
+            var anh = document.getElementById('anh');
+            anh.src = img[index].src;
+            t = setTimeout("start()", 2000);
+            var sum = index + 1;
+            document.getElementById("number").innerText = sum+"/3";
+        }
+        function stop(){
+            clearTimeout(t);
+        }
+        window.onload = start();
+    </script>
+    <br>
+    <button onclick="stop()">Stop</button>
+    <span id="number"></span>
+    <button onclick="start()">Start</button>
+     
+</body>
+</html>

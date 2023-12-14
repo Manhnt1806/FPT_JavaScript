@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #dongHo{
+            justify-content: center;
+            justify-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div id = "dongHo"></div>
+    <script type="text/javascript">
+        var now = new Date();
+        var h = now.getHours();
+        var m = now.getMinutes();
+        var s = now.getSeconds();
+        document.getElementById('dongHo').innerHTML = h+':'+m+':'+s;
+        location.reload();
+    </script>
+</body>
+</html>

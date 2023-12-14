@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function items(name, model, cost, quantity){
+            this.name = name;
+            this.model = model;
+            this.cost = cost;
+            this.quantity = quantity;
+        }
+        items[0] = new items('ss', 'samsung', 1200, 3);
+        items[1] = new items('nk', 'nokia', 500, 2);
+        items[2] = new items('ip', 'iphone', 2300, 5);
+        for(var x in items){
+            console.log(items[x]);
+        }
+        items[2].quantity;
+        console.log(items[x].quantity);
+            </script>
+</body>
+</html>

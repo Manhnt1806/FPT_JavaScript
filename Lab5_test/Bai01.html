@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+            height: 225px;
+            width: 500px;
+            border: solid 1px black;
+        }
+        img{
+            width: 200px;
+            height: 200px;
+        }
+        button{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+        <button onclick="start()">Start</button>
+    <button onclick="pause()">Pause</button>
+    <br>
+    <img src="C:\Users\PC\Desktop\Lab5_test\img\0.JPG" id="anh">
+      <script>
+        var img = [];
+        for(var i=0; i<5; i++){
+            img[i] = new Image();
+            img[i].src = "C:/Users/PC/Desktop/Lab5_test/img/" + i + ".JPG";
+        }
+        var index = 0;
+        function start(){
+            index ++;
+            if(index==img.length) index = 0;
+            var anh = document.getElementById('anh');
+            anh.src = img[index].src;
+            t = setTimeout("start()", 1000);
+        }
+        function pause(){
+            clearTimeout(t);
+        }
+    </script>
+</body>
+</html>

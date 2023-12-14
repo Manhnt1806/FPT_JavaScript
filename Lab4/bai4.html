@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="bt1" value="open" onclick="mo()">Mở cửa sổ mới</button>
+    <button id="bt2" value="close" onclick="dong()">Đóng cửa sổ mới</button>
+    <button id="bt3" value="check" onclick="kt()">Kiểm tra cửa số đã đóng chưa</button>
+    <script type="text/javascript">
+        var wd;
+        function mo(){
+            wd = window.open("https://ap.poly.edu.vn/");
+        }
+        function dong(){
+            if(wd.closed==false) wd.close();
+        }
+        function kt(){
+            if(wd.closed==false){
+                alert('Cửa sổ chưa đóng');
+                wd.close;
+            }else alert('Cửa sổ đã được đóng');
+        }
+    </script>
+</body>
+</html>

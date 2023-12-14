@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>đăng nhập</title>
+    <link rel="stylesheet" href="C:\Users\PC\Desktop\asmGD1\file_css\layout.css">
+</head>
+<body align="center">
+    <div class="logo">
+        <img src="C:\Users\PC\Desktop\asmGD1\file_image\shopee_1.jpg" alt="">
+    </div>
+    <!-- phàn menu ngang  -->
+    <div class="menu">
+        <ul>
+            <li><a href="">HOME</a></li>
+            <li><a href="C:\Users\PC\Desktop\asmGD1\file_html\bosutap.html">ALBUM</a></li>
+            <li><a href="C:\Users\PC\Desktop\asmGD1\file_html\banhang.html">BÁN HÀNG </a></li>
+        </ul>
+        <button type="submit" >Tìm Kiếm </button>
+       <input type="sreach" placeholder="Tìm Kiếm sản phẩm ">
+    </div>
+    <!-- phần form đăng kí đăng nhập  -->
+    <h3>DANH MỤC HÀNG HÓA</h3>
+    <table  class="nd">
+        <tr>
+            <td><img src="C:\Users\PC\Desktop\asmGD1\file_image\iphone11.jpg" alt="" class="img"><br>Iphone 11</td>
+            <td>$2700</td>
+            <td><button onclick="them(this)">Thêm</button></td>
+        </tr>
+        <tr>
+            <td><img src="C:\Users\PC\Desktop\asmGD1\file_image\Samsung10.jpg" alt="" class="img"><br>Samsung Note 10</td>
+            <td>$1500</td>
+            <td><button onclick="them(this)">Thêm</button></td>
+        </tr>
+        <tr>
+            <td><img src="C:\Users\PC\Desktop\asmGD1\file_image\nokia1280.jpg" alt="" class="img"><br>Nokia 1280</td>
+            <td>$1200</td>
+            <td><button onclick="them(this)">Thêm</button></td>
+        </tr>
+        <tr>
+            <td><img src="C:\Users\PC\Desktop\asmGD1\file_image\sony.jpg" alt="" class="img"><br>Sony</td>
+            <td>$1700</td>
+            <td><button onclick="them(this)">Thêm</button></td>
+        </tr>
+    </table>
+    <h3>GIỎ HÀNG CỦA BẠN</h3>
+    <h3 id="empty">Bạn chưa chọn mặt hàng nào</h3>
+    <div id="not-empty">
+        <table border="1" id="cart" class="nd"></table>
+        <h3>Tổng tiền: $<span id="tong">0</span></h3>
+        <script type="text/javascript">
+            //Thêm
+            function them(button){
+                var row = button.parentElement.parentElement.cloneNode(true);
+                var btnxoa = row.getElementsByTagName("button")[0];
+                btnxoa.innerText = "Xóa";
+                btnxoa.setAttribute('onclick','xoa(this)');
+                document.getElementById("cart").appendChild(row);
+                tinhtong();            
+            }
+            //Xóa
+            function xoa(button){
+                var row = button.parentElement.parentElement;
+                document.getElementById("cart").removeChild(row);
+                tinhtong();
+            }
+            //Tổng tiền 
+            function tinhtong(){
+                var cart = document.getElementById("cart");
+                var rows = cart.getElementsByTagName("tr");
+                var tong = 0;
+                for(var i=0; i<rows.length;i++){
+                    var cells = rows[i].getElementsByTagName("td");
+                    var price = cells[1].innerText.substr(1);
+                    tong += 1 * price;
+                }
+                document.getElementById("tong").innerText = tong;
+                if(tong==0){
+                    document.getElementById("empty").style.display = "";
+                    document.getElementById("not-empty").style.display = "none";
+                }
+            }
+        </script>
+    </div>
+    <!-- footer home  -->
+    <footer>
+       <b>manhntph29583@fpt.edu.vn</b>
+</body>
+
+
+</html>

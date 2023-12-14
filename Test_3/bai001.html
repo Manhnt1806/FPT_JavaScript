@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        img{
+            height: 300px;
+            width: 800px;
+        }
+        button{
+            background-color:aqua;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="pre()">Pre</button>
+    <img src="C:\Users\PC\Desktop\Test_3\img\0.jpg" id="anh">
+    <button onclick="next()">Next</button>
+    <script onload="start">
+        var img = [];
+        for (var i = 0; i<5; i++){
+            img[i] = new Image();
+            img[i].src = "C:/Users/PC/Desktop/Test_3/img/" +i+ ".JPG";
+        }
+        var index = 0;
+        function pre(){
+            index --;
+            if(index<0) index=0;
+            var anh = document.getElementById('anh');
+            anh.src = img[index].src;
+           
+        }
+        function next(){
+            index ++;
+            if(index>=img.length) index=0;
+            var anh = document.getElementById('anh');
+            anh.src = img[index].src;
+            t = setTimeout("next()", 1000);
+            
+        }    
+        window.onload = next();
+    </script>
+    
+
+</body>
+</html>

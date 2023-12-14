@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        button{
+            width: 60px;
+            height: 60px;
+        }
+    </style>
+</head>
+<body>
+    <h1>MÁY TÍNH</h1>
+    <button onclick="th(7)">7</button>
+    <button onclick="th(8)">8</button>
+    <button onclick="th(9)">9</button>
+    <button onclick="tt('+')">+</button>
+    <br>
+    <button onclick="th(4)">4</button>
+    <button onclick="th(5)">5</button>
+    <button onclick="th(6)">6</button>
+    <button onclick="tt('-')">-</button>
+    <br>
+    <button onclick="th(1)">1</button>
+    <button onclick="th(2)">2</button>
+    <button onclick="th(3)">3</button>
+    <button onclick="tt('*')">x</button>
+    <br>
+    <button onclick="th(0)">0</button>
+    <button onclick="xoa()" style=" color: red;">C</button>
+    <button onclick="thucHien()">=</button>
+    <button onclick="tt('/')">:+</button>
+    <script type="text/javascript">
+        var a = null, b = null, o = null;
+        function th(x){
+            if(a==null) a = x;
+            else b = x;
+        }
+        function tt(x){
+            o = x;
+        }
+        function thucHien(){
+            switch(o){
+                case '+': 
+                    var kq = Number(a) + Number(b);
+                    alert('a + b = '+kq);
+                break;
+                case '-': 
+                    var kq = a - b;
+                    alert('a - b = '+kq);
+                break;
+                case '*': 
+                    var kq = a * b;
+                    alert('a x b = '+kq);
+                break;
+                case '/': 
+                    var kq = a / b;
+                    alert('a/b = '+kq);
+                break;
+                default:
+                    alert(o + ' Không phải toán tử');
+                break;
+            }
+        }
+        function xoa(){
+            a = null;
+            b = null;
+            o = null;
+        }
+    </script>
+</body>
+</html>

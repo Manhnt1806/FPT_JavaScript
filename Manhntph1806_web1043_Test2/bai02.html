@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 02</title>
+    
+    <style>
+        body{
+            border: 0.5px solid black;
+            width: 300px;
+            height: 300px;
+        }
+        h3 {
+            margin-top: 0px;
+            padding: 20px 0px;
+        }
+        .input {
+            margin: 10px 0px;
+
+        }
+        .input input{
+            outline: none;
+            width:230px;
+            height: 30px;
+            border-top: 1px solid black;
+        }
+        button {
+            width: 100px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h3>ĐĂNG KÝ KHÓA HỌC ONLINE</h3>
+    <form action="" onsubmit="return ktra()">
+        <div>
+            <label for="name" >Họ tên: </label>
+            <input type="text" id="name" name="name">
+        </div>
+        <div>
+            <label for="email" >Email: </label>
+            <input type="email" id="email" name="email">
+        </div>       
+        <div>
+            <label for="sdt" >Số điện thoại: </label>
+            <input type="text" id="sdt" name="sdt">
+        </div>
+        <div>
+            <label for="khoaHoc" >Khóa học: </label>
+            <input type="text" id="khoaHoc" name="khoaHoc">
+        </div>
+        <div>
+            <label for="hocPhi" >Học phí: </label>
+            <input type="text" id="hocPhi" name="hocPhi">
+        </div>
+        <div>
+            <label for="khoaHoc" >Hình thức học: </label>
+            <input type="radio"> Tại trường
+            <input type="radio"> Online
+        </div>
+        <br>
+        <div>
+            <button type="submit">Đăng ký</button>
+        </div>
+    </form>
+    <script>
+        function ktra(){
+            var name = document.getElementById('name');
+            var email = document.getElementById('email');
+            var sdt = document.getElementById('sdt');
+            var khoaHoc = document.getElementById('khoaHoc');
+            var hocPhi = document.getElementById('hocPhi');
+            if(name.value.length != 0 && email.value.length !=0 && sdt.value.length !=0 ) {
+                alert("Đăng ký thành công!");
+                return true;
+            }else alert("Vui lòng điền đầy đủ thông tin!")
+        }
+    </script>
+</body>
+</html>

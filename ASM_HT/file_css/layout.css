@@ -1,0 +1,181 @@
+*{
+    margin: 0px;
+    padding:0px;
+}
+
+body{
+    background: #eedc848d;
+    /* fallback for old browsers */
+  
+}
+.logo{
+    width: 90%;
+    margin-left: 5%;
+   
+}
+.logo img{
+    width: 100%;
+    height: 300px;
+}
+/* phần menu  */
+.menu{
+    width: 90%;
+    margin-left: 5%;
+    height: 50px;
+    text-align: center;
+    background-color:orange ;
+  
+}
+.menu ul {
+    list-style: none;
+    margin-left: 200px;
+  
+   
+}
+.menu ul li {
+    float: left;
+    margin-left: 40px;
+}
+.menu ul li a {
+    text-decoration: none;
+    margin-left: 60px;
+    line-height: 50px;
+   font-weight: 600;
+   padding: 15px 10px;
+   color: white;
+   font-family: 'Times New Roman', Times, serif;
+   
+}
+.menu ul li a:hover {
+    margin-left: 60px;
+    color :black;
+    box-shadow:1px 2px 3px black;
+  
+}
+.menu input{
+    width:200px ;
+    border: #3333;
+    border-radius: 2px ;
+    padding: 0px 5px ;
+    border: none;
+}
+.menu button{
+    background: red;
+    color: aliceblue;
+    font-size: 13px;
+    font-weight: 525;
+    font-family: 'Times New Roman', Times, serif;
+    border: white;
+    padding: 0px 7px;
+}
+.menu button ,.menu input{
+    margin-top: 10px;
+    height: 30px;
+    float: right;
+    margin-right: 7px;
+}
+/* end chỉnh nội dung menu  */
+/* css phần nội đung đăng kí  */
+.nd{
+    width: 80%;
+    margin-left: 10%; 
+    box-shadow:3px 3px 7px rgba(0, 0, 0, 0.279);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.nd form{
+    width: 50%;
+    margin-left: 25%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+.nd img{
+    height: 100px;
+    width: 100px;
+}
+/* phần đi copy trên mạng  */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+ * {box-sizing: border-box}
+ 
+ h1, label{
+   color: black;
+ }
+ #gender{
+    margin-right:10px;
+    font-weight: 600;
+   
+ }
+ .nd  input[type=text],.nd input[type=password], .nd  input[type=email] {
+   width: 100%;
+   padding: 15px;
+   margin: 5px 0 22px 0;
+   display: inline-block;
+   border: none;
+   width:100%;
+   resize: vertical;
+   padding:15px;
+   border-radius:15px;
+   border:0;
+   box-shadow:4px 4px 10px rgba(0,0,0,0.2);
+ }
+.nd input[type=text]:focus,.nd input[type=password]:focus {
+   outline: none;
+ }
+hr {
+   border: 1px solid #f1f1f1;
+   margin-bottom: 25px;
+ }
+ .nd button {
+   background-color: red;
+   color: white;
+   padding: 14px 20px;
+   margin: 8px 0;
+   border: none;
+   cursor: pointer;
+   width: 100%;
+   opacity: 0.9;
+ }
+ .nd button a {
+    text-decoration: none;
+    color: white;
+ }
+.nd button:hover {
+   opacity:1;
+ }
+.cancelbtn {
+   padding: 14px 20px;
+   background-color: #f44336;
+ }
+.signupbtn {
+   float: left;
+   width: 100%;
+   border-radius:15px;
+   border:0;
+   box-shadow:4px 4px 10px rgba(0,0,0,0.2);
+ }
+.container {
+   padding: 16px;
+ }
+.clearfix::after {
+   content: "";
+   clear: both;
+   display: table;
+ }
+ /* end phần copy  */
+
+ /* phần chỉnh footer */
+
+footer{
+    width: 90%;
+    height: 40px;
+    margin-left: 5%;
+    background-color:orange;
+    letter-spacing: 1px;
+    text-align: center;
+}
+footer b {
+   
+   margin-left: 10px;
+    line-height: 50px;
+}
+/* end phần footer */

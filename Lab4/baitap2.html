@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài 2</title>
+</head>
+<body>
+    <div> <label for="">Số thứ 1 </label>
+        <br>
+        <input id="s1" type="text"></div>
+    </div>
+    <div> <label for="">Số thứ 2 </label>
+        <br>
+        <input id="s2" type="text"></div>
+    </div>
+    <div> <label for=""> Kết quả  </label>
+        <br>
+        <input id="kq" type="text">
+    </div> <br>
+    <button onclick="hienThiNhan()" type="submit"> nhân </button>
+    <button onclick="tong()" type="submit"> tổng  </button>
+    <script language="javascript">
+         var so1 = document.getElementById('s1')
+            var so2 = document.getElementById('s2')
+
+        function hienThiNhan() {
+            var kqua = Number(so1.value) * Number(so2.value)
+            console.log(kqua)
+            document.getElementById('kq').value = kqua
+           
+        }
+        function tong(){
+            var kq = Number(so1.value) + Number(so2.value)
+            console.log(kq)
+            document.getElementById('kq').value = kq
+        }
+       
+    </script>
+</body>
+</html>

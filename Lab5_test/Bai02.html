@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        
+    </style>
+</head>
+<body>
+    <h3>ĐĂNG NHẬP</h3>
+    <form action="" onsubmit="return ktra()">
+        <div>
+            <label for="name" >Tên đăng nhập: </label>
+            <br>
+            <input type="text" id="name" name="name">
+        </div>
+        <div>
+            <label for="pass1" >Mật khẩu: </label>
+            <br>
+            <input type="password" id="pass1" name="pass1">
+        </div>
+        
+        <div>
+            <label for="pass2" >Nhập lại mật khẩu: </label>
+            <br>
+            <input type="password" id="pass2" name="pass2">
+        </div>
+        <br>
+        <div>
+            <button type="submit">Đăng nhập</button>
+        </div>
+    </form>
+    <script>
+        function ktra(){
+            var name = document.getElementById('name');
+            var pass1 = document.getElementById('pass1');
+            var pass2 = document.getElementById('pass2');
+            if(name.value.length==0) {
+                name.style.background = "red";
+                return false;
+            }else name.style.background = "white";
+            if(pass1.value.length<6) {
+                pass1.style.background = "red";
+                return false;
+            }else pass1.style.background = "white";
+            if(pass2.value !== pass1.value) {
+                pass2.style.background = "red";
+                alert("Mật khẩu không trùng khớp!")
+                return false;
+            }else pass2.style.background = "white";     
+            if(name.value.length != 0 && pass1.value.length !=0 && pass2.value.length !=0) {
+                alert("Đăng nhập thành công!");
+                return true;
+            }
+        }
+    </script>
+</body>
+</html>

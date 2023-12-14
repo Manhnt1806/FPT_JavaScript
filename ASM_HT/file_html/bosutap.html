@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>album ảnh </title>
+    <link rel="stylesheet" href="C:\Users\PC\Desktop\asmGD1\file_css\layout.css">
+    <link rel="stylesheet" href="C:\Users\PC\Desktop\asmGD1\file_css\layout_album.css">
+    <script src="C:\Users\PC\Desktop\asmGD1\file_js\app.js"></script>
+</head>
+<body>
+   <div >
+    <div >
+        <img src="C:\Users\PC\Desktop\asm_HT\file_image\imgSlideShow\0.JPG" id="anh">
+    <hr>
+    <div >
+        <button onclick="first()">Fist</button>
+      <button onclick="pre()">Pre</button>
+      <button onclick="next()">Next</button>
+      <button onclick="last()">Last</button>
+      <button onclick="start()">Start</button>
+      <button onclick="stop()">Stop</button>
+      
+    </div>
+      <script onload="start">
+        var img = [];
+        for(var i=1; i<5; i++){
+            img[i] = new Image();
+            img[i].src = "C:/Users/PC/Desktop/asm_HT/file_image/imgSlideShow/" + i + ".JPG";
+        }
+        var index = 0;
+        function first(){
+            index = 0;
+            var anh = document.getElementById('anh');
+            anh.src = img[index].src;
+        }
+        function pre(){
+            index --;
+            if(index<0) index=0;
+            var anh = document.getElementById('anh');
+            anh.src = img[index].src;
+        }
+        function next(){
+            index ++;
+            if(index>=img.length) index = 0;
+            var anh = document.getElementById('anh');
+            anh.src = img[index].src;
+        }
+        function last(){
+            index = img.length - 1;
+            var anh = document.getElementById('anh');
+            anh.src = img[index].src;
+        }
+        function start(){
+            index ++;if(index==img.length) index = 0;
+            var anh = document.getElementById('anh');
+            anh.src = img[index].src;
+            t = setTimeout("start()", 1000);
+            
+        }
+        function stop(){
+            clearTimeout(t);
+        }
+        window.onload = start();
+    </script>
+    </div>
+      
+   </div>
+   
+</body>
+
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>SV trốn học</h1>
+    <div>
+        <h3>Họ tên:</h3>
+        <input id="hoTen" type="text">
+        <h3>Môn đang học:</h3>
+        <input id="monHoc" type="text">
+        <h3>Số buổi vắng:</h3>
+        <input id="soBuoiVang" type="number">
+        <br>
+        <br>
+        <button onclick="them(this)">Thêm</button>
+    </div>
+    <br>
+    <table border="1" id="cart">
+        <tr>
+            <td><h3>Tên</h3></td>
+            <td><h3>Môn</h3></td>
+            <td><h3>Đã nghỉ (Số buổi)</h3></td>
+        </tr>
+    </table>
+    <button onclick="check" type="submit">---Check---</button>
+    <script type="text/javascript">
+        var ten = document.getElementById('hoTen')
+        var mon = document.getElementById('monHoc')
+        var vang = document.getElementById('soBuoiVang')
+        function fix(){
+            if(ten.value.length<8){
+                alert('Họ tên phải nhập tối thiểu 8 ký tự')
+                return;
+            }
+            if (mon.value.includes('Fpoly') == false) {
+                alert('Môn đang học phải có ký tự Fpoly')
+                return;
+            }
+            if (ten.value.length<2 && vang.value.includes('0') == false){
+                alert('Số phải có 2 chữ số bắt đầu bằng 0')
+            }
+        }
+        function them(){
+            var row = button.parentElement.parentElement.cloneNode(true);
+                document.getElementById("cart").appendChild(row);
+        }
+
+       
+
+    </script>
+</body>
+</html>

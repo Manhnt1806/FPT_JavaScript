@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 02</title>
+
+    <style>
+        table{
+            text-align: center;
+            height: 200px;
+            width: 400px;
+            border: solid 1px black;
+        }
+        td{
+           text-align: left;
+        }
+    </style>
+    </style>
+</head>
+<body>
+    <form action="" onsubmit="return ktra()">
+        <table align="center">
+            <tr>
+                <th colspan="2"><h3>ĐĂNG KÝ</h3></th>
+            </tr>
+            <tr>
+                <td><label for="name" >Họ tên: </label></td>
+                <td> <input type="text" id="name" name="name"></td>
+            </tr>
+            <tr>
+                <td><label for="email" >Email: </label></td>
+                <td><input type="email" id="email" name="email"></td>
+            </tr>    
+            <tr>
+                <td><label for="sdt" >Số điện thoại: </label></td>
+            <td><input type="text" id="sdt" name="sdt"></td>
+        </tr>
+      
+        <tr>
+            <td><label for="user" >User: </label></td>
+            <td><input type="text" id="user" name="user"></td>
+        </tr>  
+        <tr>
+            <td><label for="pass" >Pass: </label></td>
+            <td><input type="password" id="pass" name="pass"></td>
+        </tr>  
+        <tr>
+            <td><label for="repass" >Repass: </label></td>
+            <td><input type="password" id="repass" name="repass"></td>
+        </tr>
+        <tr>
+            <td><label for="gioitinh" >Giới tính: </label></td>
+            <td>
+                <label>
+                    <input type="radio" name="gioitinh" id="nam"> Nam
+                </label>
+                <label>
+                    <input type="radio" name="gioitinh" id="nu"> Nữ
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td>Chuyên Ngành</td>
+            <td>
+                <select name="subject">
+                    <option value="IT">IT</option>
+                    <option value="Maketing">Marketing</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Ghi chú</td>
+            <td >
+                <textarea  cols="20">    
+                </textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>Avarta</td>
+            <td>
+                <input type="file" name="avarta">
+            </td>
+        </tr>
+        <tr>
+            <td>Sở thích</td>
+            <td>
+                <label>
+                    <input type="checkbox" name="film"> Xem phim
+                </label>
+                <label>
+                    <input type="checkbox" name="soccer"> Đá bóng
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <th colspan="2"><button type="submit">Đăng ký</button></th>
+        </tr>
+        </table>   
+    </form>
+    <script>
+        function ktra(){
+            var name = document.getElementById('name');
+            var email = document.getElementById('email');
+            var sdt = document.getElementById('sdt');
+            var user = document.getElementById('user');
+            var pass = document.getElementById('pass');
+            var repass = document.getElementById('repass');
+           
+            if(name.value.length  ==0 || email.value.length ==0 || sdt.value.length ==0 || user.value.length ==0 || pass.value.length ==0 || repass.value.length ==0 ) {
+                alert("Vui lòng điền đầy đủ thông tin!")
+                return false;
+            } 
+            if(user.value.length<8){
+                alert('User phải ít nhất 8 ký tự!')
+                return false;
+            } 
+            if(repass.value !== pass.value) {
+                alert("Mật khẩu không trùng khớp!")
+                return false;
+            }
+            if(name.value.length  !=0 && email.value.length !=0 && sdt.value.length !=0 && user.value.length !=0 && pass.value.length !=0 && repass.value.length !=0) {
+                alert("Đăng ký thành công!");
+                return true;
+            }
+        }
+    </script>
+</body>
+</html>

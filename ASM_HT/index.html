@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ </title>
+    <link rel="stylesheet" href="C:\Users\PC\Desktop\asmGD1\file_css\layout.css">
+    <script src="C:\Users\PC\Desktop\asmGD1\file_js\app.js"></script>
+</head>
+<body>
+    <div class="logo">
+        <img src="C:\Users\PC\Desktop\asmGD1\file_image\shopee_1.jpg" alt="">
+    </div>
+    <!-- phàn menu ngang  -->
+    <div class="menu">
+        <ul>
+            <li><a href="">HOME</a></li>
+            <li><a href="C:\Users\PC\Desktop\asmGD1\file_html\bosutap.html">BỘ SƯU TẬP</a></li>
+            <li><a href="C:\Users\PC\Desktop\asmGD1\file_html\banhang.html">BÁN HÀNG</a></li>
+        </ul>
+        <button type="submit" >Tìm Kiếm </button>
+       <input type="sreach" placeholder="Tìm Kiếm sản phẩm ">
+      
+
+    </div>
+    <!-- phần form đăng kí đăng nhập  -->
+    <div class="nd" >
+        
+        <form action="" method="post" onsubmit="return ktra()">
+            <div class="container">
+              <h1>Form Đăng Ký</h1>
+              <hr>
+             <label for="email" ><b>Email</b></label>
+              <input type="email" onclick="checklogin()" placeholder="Nhập Email" name="email" id="email" required>
+             <label for="sdt"><b>Số điện thoại </b></label>
+              <input type="text" placeholder="Nhập số điện thoại" name="usename" id="usename" required>
+              <label for="username"><b>Tên đăng nhập </b></label>
+              <input type="text" placeholder="Nhập username" name="usename" id="usename" required>
+             <label for="psw"><b>Mật Khẩu</b></label>
+              <input type="password" placeholder="Nhập Mật Khẩu" name="pass" id="pass" required>
+             <label for="psw-repeat"><b>Nhập Lại Mật Khẩu</b></label>
+              <input type="password" placeholder="Nhập Lại Mật Khẩu" name="confirm-pass" id="confirm-pass" required> 
+            <div class="check_gioi_tinh">
+                <input type="radio" name="gender" id="gender">Nam
+            
+                <input type="radio" name="gender" id="gender">Nữ
+            
+                <input type="radio" name="gender" id="gender">Khác
+            </div>   
+              <br>
+             <div class="clearfix">
+                <button type="submit" onclick="checklogin()" class="signupbtn" id="signupbtn">Đăng ký</button>
+              </div>
+            </div>
+          </form>
+    </div>
+    <!-- footer home  -->
+    <footer>
+        <b>manhntph29583@fpt.edu.vn 
+        </b>
+    </footer>
+</body>
+
+
+</html>
